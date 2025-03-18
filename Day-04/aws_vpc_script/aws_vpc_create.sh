@@ -46,10 +46,6 @@ fi
 
 # Add Name tag to VPC
 aws ec2 create-tags --resources $VPC_ID --tags Key=Name,Value=$VPC_NAME --region $REGION
-if [ $? -ne 0 ]; then
-    echo "Error: Failed to tag VPC."
-    exit 1
-fi
 
 # Create Subnet
 SUBNET_ID=$(aws ec2 create-subnet --vpc-id $VPC_ID --cidr-block $SUBNET_CIDR --query 'Subnet.SubnetId' --output text --region $REGION)
@@ -60,10 +56,7 @@ fi
 
 # Add Name tag to Subnet
 aws ec2 create-tags --resources $SUBNET_ID --tags Key=Name,Value=$SUBNET_NAME --region $REGION
-if [ $? -ne 0 ]; then
-    echo "Error: Failed to tag Subnet."
-    exit 1
-fi
+
 
 # Display VPC and Subnet ID
 echo "VPC ID: $VPC_ID"

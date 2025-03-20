@@ -4,7 +4,7 @@ import os
 from grpc import services
 
 # Set your API key here
-os.environ["GOOGLE_API_KEY"] = "AIzaSyAmIjvy-96u0MlJp0u39r0X7wODz_ajb24"
+os.environ["GOOGLE_API_KEY"] = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 
 # Configure the Gemini model
 genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))

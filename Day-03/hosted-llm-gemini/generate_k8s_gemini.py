@@ -28,7 +28,7 @@ def generate_k8s(service_type):
     return response.text
 
 if __name__ == '__main__':
-    service = input("Please enter the service type (e.g., ClusterIP, NodePort, LoadBalancer): ")
+    service = input("Please enter the service type (ClusterIP, NodePort, LoadBalancer): ")
     kubernetes = generate_k8s(service)
     print("\nGenerated Kubernetes:\n")
     print(kubernetes)

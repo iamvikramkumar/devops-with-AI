@@ -1,0 +1,27 @@
+
+__pycache__/
+.DS_Store
+.venv/
+
+# Ignore pyproject.toml
+pyproject.toml
+
+# Ignore uv.lock
+uv.lock
+
+# Ignore the entire .env folder
+.env/
+# Ignore the entire .venv folder    
+
+.venv/
+# Ignore the entire .DS_Store folder
+.DS_Store
+# Ignore the entire .pytest_cache folder
+pytest_cache/
+# Ignore the entire .mypy_cache folder
+.mypy_cache/
+# Ignore the entire .coverage folder
+.coverage
+# Ignore the entire .pytest_cache folder
+pytest_cache/
+# Ignore the entire .mypy_cache folder
